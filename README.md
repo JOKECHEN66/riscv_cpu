@@ -17,5 +17,6 @@ A tiny implement for riscv cpu, with hardware support, os and compiler
   i. git add .  
   ii. git commit -m "concrete operation"  
   iii. git push origin master  
- 5. 等待提交成功后刷新项目  
+ 5. 等待提交成功后刷新项目 
+ 
 如果不清楚具体操作，可自行查阅git工具的基础使用方法  

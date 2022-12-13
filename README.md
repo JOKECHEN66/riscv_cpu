@@ -22,3 +22,9 @@ A tiny implement for riscv cpu, with hardware support, os and compiler
  5. 等待提交成功后刷新项目 
  
 如果不清楚具体操作，可自行查阅git工具的基础使用方法  
+
+# 日志
+
+时间 | 操作 | 备注
+---- | --------------------- | ------ 
+2022.12.13 | 第一次提交，部署cpu相关文件 | 无

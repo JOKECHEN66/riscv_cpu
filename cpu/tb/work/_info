@@ -1,0 +1,321 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ModelSim/examples
+T_opt
+!s110 1667989031
+V1LK[Gl=HH<]?Ha0m4nHOV2
+04 2 4 work ex fast 0
+=1-04421a004810-636b7e27-15-2610
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.5;63
+R0
+T_opt1
+!s110 1667989181
+V]XULTUHZzLcY;`bCJ@Lz81
+04 6 4 work pc_reg fast 0
+=1-04421a004810-636b7ebd-1b5-4788
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1668414289
+VX=IPoUo1NG4S=M85Q>aK@3
+04 2 4 work tb fast 0
+=1-04421a004810-6371fb51-22d-1508
+R1
+R2
+n@_opt2
+R3
+R0
+vctrl
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 F>jPOF=JFfn7_Z5bkeVgK2
+IG2U_:Fg6OK9YVoCD`@[V40
+Z5 dD:/MyCode/Verilog/riscv_cpu/tb
+w1668503188
+8D:/MyCode/Verilog/riscv_cpu/rtl/ctrl.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/ctrl.v
+L0 1
+Z6 OL;L;10.5;63
+Z7 !s108 1668600619.000000
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/ctrl.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdff_set
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 >8>gdQJ6m`iVgNj9M8[cn3
+I5LCgckBO[_@9SNYMF9DVU3
+R5
+w1668421473
+8D:/MyCode/Verilog/riscv_cpu/rtl/dff_set.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/dff_set.v
+L0 1
+R6
+Z9 !s108 1668600618.000000
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/dff_set.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/dff_set.v|
+!i113 0
+R8
+R2
+vex
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ZR[;lbCSIN<HYd[Bd9?l10
+IW<PXe^UYXz3=_Sz:_?]8U2
+R5
+w1668501740
+8D:/MyCode/Verilog/riscv_cpu/rtl/ex.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/ex.v
+L0 4
+R6
+R9
+!s107 D:\MyCode\Verilog\riscv_cpu\rtl\defines.v|D:/MyCode/Verilog/riscv_cpu/rtl/ex.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/ex.v|
+!i113 0
+R8
+R2
+vid
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ?nTNUj5gl4YXC4h`Ho7md1
+I[_dZZX_ICD^lSO^B_dgRM0
+R5
+w1668501513
+8D:/MyCode/Verilog/riscv_cpu/rtl/id.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/id.v
+L0 4
+R6
+R9
+!s107 D:\MyCode\Verilog\riscv_cpu\rtl\defines.v|D:/MyCode/Verilog/riscv_cpu/rtl/id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/id.v|
+!i113 0
+R8
+R2
+vid_ex
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 0i>a4]9bh4:DYN83ek>N^1
+IF:=[=]6dA<]i_`@ALJ@1@1
+R5
+w1668501603
+8D:/MyCode/Verilog/riscv_cpu/rtl/id_ex.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/id_ex.v
+L0 4
+R6
+R9
+!s107 D:\MyCode\Verilog\riscv_cpu\rtl\defines.v|D:/MyCode/Verilog/riscv_cpu/rtl/id_ex.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/id_ex.v|
+!i113 0
+R8
+R2
+vif_id
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 EfZzT^Vb;9]Q<mme7;U?Q2
+I9VDNhAWaIK;dY9<Gj5b;a0
+R5
+w1668426494
+8D:/MyCode/Verilog/riscv_cpu/rtl/if_id.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/if_id.v
+L0 3
+R6
+R9
+!s107 D:\MyCode\Verilog\riscv_cpu\rtl\defines.v|D:/MyCode/Verilog/riscv_cpu/rtl/if_id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/if_id.v|
+!i113 0
+R8
+R2
+vifetch
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 HU2zaDo;FZDBBEcSzFE0=0
+IFFWH=BPbj]@WjP4i;>Skh1
+R5
+w1667999957
+8D:/MyCode/Verilog/riscv_cpu/rtl/ifecth.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/ifecth.v
+L0 1
+R6
+R9
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/ifecth.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/ifecth.v|
+!i113 0
+R8
+R2
+vopen_risc_v
+!s110 1668000704
+!i10b 1
+!s100 0QIP=Xab6M_hL<5>7F8QU2
+IN5H]>QWhKmjzLPncTEHn_2
+R4
+R5
+w1668000586
+Z10 8D:/MyCode/Verilog/riscv_cpu/rtl/riscv_cpu.v
+Z11 FD:/MyCode/Verilog/riscv_cpu/rtl/riscv_cpu.v
+L0 128
+R6
+r1
+!s85 0
+31
+!s108 1668000704.000000
+Z12 !s107 D:/MyCode/Verilog/riscv_cpu/rtl/riscv_cpu.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/riscv_cpu.v|
+!i113 0
+R8
+R2
+vpc_reg
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ZRGV1WO45Jc8nHZ<Hf3iW1
+I2UcOdO:PoJMKDml2Y7P9a2
+R5
+w1668502721
+8D:/MyCode/Verilog/riscv_cpu/rtl/pc_reg.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/pc_reg.v
+L0 1
+R6
+R7
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/pc_reg.v|
+!i113 0
+R8
+R2
+vregs
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 TX^<LUP[KfJb2AnT::T692
+IF5cd@;Md]_AUih?cNUW2^0
+R5
+w1668494973
+8D:/MyCode/Verilog/riscv_cpu/rtl/regs.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/regs.v
+L0 1
+R6
+R7
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/regs.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/regs.v|
+!i113 0
+R8
+R2
+vriscv_cpu
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 KW[2^JliL4aJgSUE]<goV1
+ISGHeP]EIZD_>zb024O79o1
+R5
+w1668503951
+R10
+R11
+L0 2
+R6
+R7
+R12
+R13
+!i113 0
+R8
+R2
+vriscv_cpu_soc
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^a7<S]aEAOScMZ<0IHZ]i1
+I>i3798jL=?6;==Za8j;]a0
+R5
+w1668504159
+8D:/MyCode/Verilog/riscv_cpu/tb/riscv_cpu_soc.v
+FD:/MyCode/Verilog/riscv_cpu/tb/riscv_cpu_soc.v
+L0 2
+R6
+R9
+!s107 D:/MyCode/Verilog/riscv_cpu/tb/riscv_cpu_soc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/tb/riscv_cpu_soc.v|
+!i113 0
+R8
+R2
+vrom
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 fYb^Ll8TL^MnQAkLNXmgc2
+ILY7?EEL2@03dNQFMKaF[W3
+R5
+w1668425565
+8D:/MyCode/Verilog/riscv_cpu/rtl/rom.v
+FD:/MyCode/Verilog/riscv_cpu/rtl/rom.v
+L0 1
+R6
+R7
+!s107 D:/MyCode/Verilog/riscv_cpu/rtl/rom.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/rtl/rom.v|
+!i113 0
+R8
+R2
+vtb
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 hMYBAK8zaIALQe8K5kOVa0
+Idk3cFkCz4GFWIF`N0OPDd2
+R5
+w1668603088
+8D:/MyCode/Verilog/riscv_cpu/tb/tb.v
+FD:/MyCode/Verilog/riscv_cpu/tb/tb.v
+L0 1
+R6
+!s108 1668603109.000000
+!s107 D:/MyCode/Verilog/riscv_cpu/tb/tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/MyCode/Verilog/riscv_cpu/tb/tb.v|
+!i113 0
+R8
+R2

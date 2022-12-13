@@ -1,0 +1,42 @@
+# Current time Wed Nov 16 20:51:14 2022
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "10.5"
+# Version = "2016.02"
+# Date = "Feb 13 2016"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6ff925cd. Traceback:
+# 0    0x6ff925cd: 'Tcl_GetVariableFullName + 0x94d'
+# 1    0x6ff92ac3: 'TclDeleteCompiledLocalVars + 0x73'
+# 2    0x6ff561fb: 'Tcl_PopCallFrame + 0x6b'
+# 3    0x6ff6f942: 'TclObjInterpProcCore + 0x112'
+# 4    0x6fee0e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 5    0x6fee1e9c: 'Tcl_EvalEx + 0x9ec'
+# 6    0x6fee2a43: 'TclEvalObjEx + 0x243'
+# 7    0x6ff6ecc9: 'TclObjGetFrame + 0x339'
+# 8    0x6fee0e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 9    0x6ff25b92: 'Tcl_ExprObj + 0x1922'
+# 10   0x6ff6f8a4: 'TclObjInterpProcCore + 0x74'
+# 11   0x6fee0e9d: 'Tcl_ListMathFuncs + 0x59d'
+# 12   0x6fee1280: 'Tcl_ListMathFuncs + 0x980'
+# 13   0x6fee1341: 'Tcl_EvalObjv + 0x51'
+# 14   0x6fee2958: 'TclEvalObjEx + 0x158'
+# 15   0x6fee27ed: 'Tcl_EvalObjEx + 0x1d'
+# 16   0x40188851: 'Sqlite_SafeUnload + 0x1106c1'
+# 17   0x401872e5: 'Sqlite_SafeUnload + 0x10f155'
+# 18   0x4018738d: 'Sqlite_SafeUnload + 0x10f1fd'
+# 19   0x4018082d: 'Sqlite_SafeUnload + 0x10869d'
+# 20   0x40180658: 'Sqlite_SafeUnload + 0x1084c8'
+# 21   0x6ff81fac: 'TclServiceIdle + 0x6c'
+# 22   0x6ff5f1c8: 'Tcl_DoOneEvent + 0x178'
+# 23   0x6fd92ee5: 'Tk_MainLoop + 0x25'
+# 24   0x6fdca414: 'Tk_MainEx + 0x984'
+# 25   0x401cddbb: 'Mtirpc_Init + 0x21a0b'
+# 26   0x401d032a: 'Mtirpc_Init + 0x23f7a'
+# 27   0x405d445b: 'Tclsqlite_Init + 0x1a2b'
+# 28   0x2a2974b4: 'BaseThreadInitThunk + 0x14'
+# 29   0x2b6e26a1: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+

@@ -2,10 +2,10 @@
 A tiny implement for riscv cpu, with hardware support, os and compiler 
 
 # 项目组织结构 
-/root  
-// compiler # 编译器相关文件  
-// cpu      # 流水线逻辑相关文件  
-// os       # 操作系统相关文件  
+|root  
+|-compiler # 编译器相关文件  
+|-cpu      # 流水线逻辑相关文件  
+|-os       # 操作系统相关文件  
  
 各模块应在相应的根目录编辑readme文件，简单介绍模块内代码组织形式  
 

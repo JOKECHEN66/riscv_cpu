@@ -31,7 +31,7 @@ OBJS += $(SRCS_C:.c=.o)
 all: os.elf
 
 os.elf: ${OBJS}
-	${CC} ${CFLAGS} -Ttext=0x80000000 -o os.elf $^
+	${CC} ${CFLAGS} -T os.ld -o os.elf $^
 	${OBJCOPY} -O binary os.elf os.bin
 
 %.o : %.c

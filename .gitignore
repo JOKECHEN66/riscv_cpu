@@ -1,0 +1,3 @@
+os/code/*.o
+os/code/*.bin
+os/code/*.elf

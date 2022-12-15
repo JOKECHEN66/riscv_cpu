@@ -20,6 +20,6 @@
    - ```docker run -dit --name os zhugez/nj-lab:latest```
    - ```docker exec -it os /bin/bash```
 
-
+3. 最简单的办法，找我要我部署了的服务器账号 doge 
 
 之后再git clone项目代码，在 ```./os/code``` 目录下面先make，再make run即可。

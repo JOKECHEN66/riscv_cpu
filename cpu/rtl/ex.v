@@ -9,6 +9,9 @@ module ex (
     input wire[31: 0] op2_i,
     input wire[4: 0]  rd_addr_i,
     input wire        rd_wen_i,
+    // for B-type instruction
+    input wire[31:0] base_addr_i,
+	input wire[31:0] addr_offset_i,	
 
     // to regs
     output reg[4: 0]  rd_addr_o,
@@ -48,7 +51,7 @@ module ex (
 
     // B型指令
     // B型指令中的跳转立即数扩充
-    wire[31: 0] jump_imm = {{19{inst_i[31]}}, inst_i[31], inst_i[7], inst_i[30: 25], inst_i[11: 8], 1'b0};
+    // wire[31: 0] jump_imm = {{19{inst_i[31]}}, inst_i[31], inst_i[7], inst_i[30: 25], inst_i[11: 8], 1'b0};
     wire        op1_i_equal_op2_i;
     wire        op1_i_less_op2_i_signed;        // 有符号比较 小于
     wire        op1_i_less_op2_i_unsigned;      // 无符号比较 小于
@@ -65,6 +68,7 @@ module ex (
     wire[31:0] op1_i_and_op2_i;
     wire[31:0] op1_i_shift_letf_op2_i;
     wire[31:0] op1_i_shift_right_op2_i;
+    wire[31:0] base_addr_add_addr_offset;
 
     assign op1_i_add_op2_i           = op1_i + op2_i;		// 加法器
     assign op1_i_xor_op2_i          = op1_i ^ op2_i;        // 异或
@@ -72,6 +76,7 @@ module ex (
     assign op1_i_and_op2_i          = op1_i & op2_i;        // 与
     assign op1_i_shift_letf_op2_i 	 = op1_i << op2_i;			    // 左移
     assign op1_i_shift_right_op2_i 	 = op1_i >> op2_i;			    // 右移
+    assign base_addr_add_addr_offset = base_addr_i + addr_offset_i; // 计算地址单元 PC+=jump_imm
 
     // type I
     wire[31:0] SRA_mask;
@@ -214,16 +219,36 @@ module ex (
                 rd_addr_o = 5'b0;
                 rd_wen_o = 1'b0;
                 case (func3)
-                    `INST_BEQ: begin
-                        jump_addr_o = (inst_addr_i + jump_imm) & {32{(op1_i_equal_op2_i)}};     // 若rs1 == rs2则发生跳转
+                    `INST_BEQ: begin                // Branch ==
+                        jump_addr_o = base_addr_add_addr_offset;     // 若rs1 == rs2则发生跳转
                         jump_en_o = op1_i_equal_op2_i;
                         hold_flag_o = 1'b0;
                     end
-                    `INST_BNE: begin
-                        jump_addr_o = (inst_addr_i + jump_imm) & {32{(~op1_i_equal_op2_i)}};    // 若rs1 != rs2则发生跳转
+                    `INST_BNE: begin               // Branch !=
+                        jump_addr_o = base_addr_add_addr_offset;    // 若rs1 != rs2则发生跳转
                         jump_en_o = ~op1_i_equal_op2_i;
                         hold_flag_o = 1'b0;
                     end
+                    `INST_BLT: begin               // Branch <
+                        jump_addr_o = base_addr_add_addr_offset;
+                        jump_en_o = op1_i_less_op2_i_signed;
+                        hold_flag_o = 1'b0;
+                    end
+                    `INST_BLTU: begin               // Branch Unsigned <
+                        jump_addr_o = base_addr_add_addr_offset;
+                        jump_en_o = op1_i_less_op2_i_unsigned;
+                        hold_flag_o = 1'b0;
+                    end
+                    `INST_BGE:begin                 // Branch >
+						jump_addr_o = base_addr_add_addr_offset;
+						jump_en_o	= ~op1_i_less_op2_i_signed;
+						hold_flag_o = 1'b0;					
+					end
+                    `INST_BGEU:begin                 // Branch Unsigned >
+						jump_addr_o = base_addr_add_addr_offset;
+						jump_en_o	= ~op1_i_less_op2_i_unsigned;
+						hold_flag_o = 1'b0;					
+					end
                     default: begin
                         jump_addr_o = 32'b0;
                         jump_en_o = 1'b0;

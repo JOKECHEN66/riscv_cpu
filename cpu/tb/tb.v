@@ -28,7 +28,7 @@ module tb;
 
     // 将testbench指令读入rom中
     initial begin
-        $readmemh(".\\inst_txt\\rv32ui-p-sra.txt", tb.riscv_cpu_soc_inst.rom_inst.rom_mem);
+        $readmemh(".\\inst_txt\\rv32ui-p-bgeu.txt", tb.riscv_cpu_soc_inst.rom_inst.rom_mem);
     end
 
     initial begin

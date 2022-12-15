@@ -32,6 +32,8 @@ module riscv_cpu (
 	wire[31:0] id_op2_o;
 	wire[4:0]  id_rd_addr_o;
 	wire       id_reg_wen;
+	wire[31:0] id_base_addr_o;	
+	wire[31:0] id_addr_offset_o;
 
 	// regs to id
 	wire[31:0] regs_reg1_rdata_o;
@@ -44,6 +46,8 @@ module riscv_cpu (
 	wire[31:0] id_ex_op2_o;
 	wire[4:0]  id_ex_rd_addr_o;
 	wire       id_ex_reg_wen;
+	wire[31:0] id_ex_base_addr_o;	
+	wire[31:0] id_ex_addr_offset_o;
 
 	// ex to ctrl
 	wire [31: 0] ex_jump_arrd_o;
@@ -93,7 +97,9 @@ module riscv_cpu (
 		.op1_o			(id_op1_o),	
 		.op2_o			(id_op2_o),
 		.rd_addr_o		(id_rd_addr_o),	
-		.reg_wen        (id_reg_wen)
+		.reg_wen        (id_reg_wen),
+		.base_addr_o	(id_base_addr_o	),
+		.addr_offset_o	(id_addr_offset_o)
 	);
 
 	regs regs_inst(
@@ -118,12 +124,16 @@ module riscv_cpu (
 		.op2_i			(id_op2_o),
 		.rd_addr_i		(id_rd_addr_o),	
 		.reg_wen_i		(id_reg_wen),
+		.base_addr_i	(id_base_addr_o),
+		.addr_offset_i	(id_addr_offset_o),
 		.inst_o			(id_ex_inst_o),
 		.inst_addr_o    (id_ex_inst_addr_o),
 		.op1_o			(id_ex_op1_o),		
 		.op2_o			(id_ex_op2_o),
 		.rd_addr_o		(id_ex_rd_addr_o),	
-		.reg_wen_o		(id_ex_reg_wen)
+		.reg_wen_o		(id_ex_reg_wen),
+		.base_addr_o	(id_ex_base_addr_o),
+		.addr_offset_o	(id_ex_addr_offset_o)	
 	);
 
 	ex ex_inst(
@@ -133,6 +143,8 @@ module riscv_cpu (
 		.op2_i			(id_ex_op2_o),
 		.rd_addr_i		(id_ex_rd_addr_o),
 		.rd_wen_i		(id_ex_reg_wen),
+		.base_addr_i	(id_ex_base_addr_o),
+		.addr_offset_i	(id_ex_addr_offset_o),
 		.rd_addr_o		(ex_rd_addr_o),
 		.rd_data_o		(ex_rd_data_o),	
 		.rd_wen_o       (ex_reg_wen_o),

@@ -20,7 +20,9 @@ module id (
     output reg[31: 0] op1_o,
     output reg[31: 0] op2_o,
     output reg[4: 0]  rd_addr_o,
-    output reg        reg_wen
+    output reg        reg_wen,
+    output reg[31:0] base_addr_o,
+	output reg[31:0] addr_offset_o		
 );  
 
     ///////// 具体指令集详见rsic-v指令集官方文档 /////////
@@ -54,6 +56,9 @@ module id (
         inst_addr_o = inst_addr_i;
         case (opcode)
             `INST_TYPE_I: begin
+                // I型无需计算PC跳转地址
+                base_addr_o		= 32'b0;
+				addr_offset_o	= 32'b0;
                 case (func3)
                     `INST_ADDI,`INST_SLTI,`INST_SLTIU,`INST_XORI,`INST_ORI,`INST_ANDI:begin
 						rs1_addr_o = rs1;
@@ -82,6 +87,9 @@ module id (
                 endcase
             end 
             `INST_TYPE_R_M: begin
+                // R型无需计算PC跳转地址
+                base_addr_o		= 32'b0;
+				addr_offset_o	= 32'b0;
                 case (func3)
                     `INST_ADD_SUB,`INST_XOR,`INST_OR,`INST_AND,`INST_SLT,`INST_SLTU: begin
                         rs1_addr_o = rs1;
@@ -111,13 +119,17 @@ module id (
             end
             `INST_TYPE_B: begin
                 case (func3)
-                    `INST_BNE, `INST_BEQ: begin
+                    `INST_BNE, `INST_BEQ,`INST_BLT,`INST_BLTU,`INST_BGE,`INST_BGEU: begin
                         rs1_addr_o = rs1;
                         rs2_addr_o = rs2;
                         op1_o = rs1_data_i;
                         op2_o = rs2_data_i;
                         rd_addr_o = 5'b0;
                         reg_wen = 1'b0;
+                        // 计算PC跳转地址
+                        base_addr_o		= inst_addr_i;
+				        addr_offset_o	= {{19{inst_i[31]}},inst_i[31],inst_i[7],inst_i[30:25],inst_i[11:8],1'b0};
+                        // 最低位默认补0，高位做立即数拓展
                     end
                     default: begin
                         rs1_addr_o = 5'b0;
@@ -126,6 +138,8 @@ module id (
                         op2_o = 32'b0;
                         rd_addr_o = 5'b0;
                         reg_wen = 1'b0;
+                        base_addr_o		= 32'b0;
+						addr_offset_o	= 32'b0;
                     end 
                 endcase
             end
@@ -137,6 +151,8 @@ module id (
 				op2_o      = 32'b0;
 				rd_addr_o  = rd;
 				reg_wen    = 1'b1;
+                base_addr_o		= inst_addr_i;
+				addr_offset_o	= {{12{inst_i[31]}}, inst_i[19:12], inst_i[20], inst_i[30:21], 1'b0};
 			end
 			`INST_LUI: begin
 				rs1_addr_o = 5'b0;
@@ -144,7 +160,9 @@ module id (
 				op1_o 	   = {inst_i[31:12], 12'b0};
 				op2_o      = 32'b0;
 				rd_addr_o  = rd;
-				reg_wen    = 1'b1;				
+				reg_wen    = 1'b1;
+                base_addr_o		= 32'b0;
+				addr_offset_o	= 32'b0;							
 			end			
             default: begin
                 rs1_addr_o = 5'b0;
@@ -153,6 +171,8 @@ module id (
                 op2_o = 32'b0;
                 rd_addr_o = 5'b0;
                 reg_wen = 1'b0;
+                base_addr_o		= 32'b0;
+				addr_offset_o	= 32'b0;		
             end
         endcase
     end

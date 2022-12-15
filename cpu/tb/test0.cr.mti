@@ -1,16 +1,16 @@
-F:/risc_cpu/cpu/tb/riscv_cpu_soc.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/tb/riscv_cpu_soc.v
-Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
--- Compiling module riscv_cpu_soc
-
-Top level modules:
-	riscv_cpu_soc
-
-} {} {}} F:/risc_cpu/cpu/rtl/riscv_cpu.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/riscv_cpu.v
+F:/risc_cpu/cpu/rtl/riscv_cpu.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/riscv_cpu.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module riscv_cpu
 
 Top level modules:
 	riscv_cpu
+
+} {} {}} F:/risc_cpu/cpu/tb/riscv_cpu_soc.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/tb/riscv_cpu_soc.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module riscv_cpu_soc
+
+Top level modules:
+	riscv_cpu_soc
 
 } {} {}} F:/risc_cpu/cpu/rtl/defines.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/defines.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
@@ -71,18 +71,18 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	if_id
 
-} {} {}} F:/risc_cpu/cpu/rtl/id.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/id.v
-Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
--- Compiling module id
-
-Top level modules:
-	id
-
 } {} {}} F:/risc_cpu/cpu/rtl/ex.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/ex.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module ex
 
 Top level modules:
 	ex
+
+} {} {}} F:/risc_cpu/cpu/rtl/id.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/id.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module id
+
+Top level modules:
+	id
 
 } {} {}}

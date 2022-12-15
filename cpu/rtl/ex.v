@@ -20,6 +20,8 @@ module ex (
     output reg        jump_en_o,
     output reg        hold_flag_o
 );
+
+
     // I型指令结构
     wire[6: 0] opcode;
     wire[4: 0] rd;
@@ -48,8 +50,31 @@ module ex (
     // B型指令中的跳转立即数扩充
     wire[31: 0] jump_imm = {{19{inst_i[31]}}, inst_i[31], inst_i[7], inst_i[30: 25], inst_i[11: 8], 1'b0};
     wire        op1_i_equal_op2_i;
+    wire        op1_i_less_op2_i_signed;        // 有符号比较 小于
+    wire        op1_i_less_op2_i_unsigned;      // 无符号比较 小于
     
     assign      op1_i_equal_op2_i = (op1_i == op2_i) ? 1'b1 : 1'b0;
+    assign	    op1_i_less_op2_i_signed = ($signed(op1_i) < $signed(op2_i))?1'b1:1'b0;
+    assign	    op1_i_less_op2_i_unsigned = (op1_i < op2_i)?1'b1:1'b0;
+
+
+     // ALU
+    wire[31:0] op1_i_xor_op2_i;
+    wire[31:0] op1_i_or_op2_i;
+    wire[31:0] op1_i_and_op2_i;
+    wire[31:0] op1_i_shift_letf_op2_i;
+    wire[31:0] op1_i_shift_right_op2_i;
+
+
+    assign op1_i_xor_op2_i          = op1_i ^ op2_i;        // 异或
+    assign op1_i_or_op2_i           = op1_i | op2_i;        // 或
+    assign op1_i_and_op2_i          = op1_i & op2_i;        // 与
+    assign op1_i_shift_letf_op2_i 	 = op1_i << op2_i;			    // 左移
+    assign op1_i_shift_right_op2_i 	 = op1_i >> op2_i;			    // 右移
+
+    // type I
+    wire[31:0] SRA_mask;
+    assign SRA_mask = (32'hffff_ffff) >> op2_i[4:0];            // 掩码SRA_mask与rs1移动相同位数
 
     always @(*) begin
         case (opcode)
@@ -63,7 +88,49 @@ module ex (
                         rd_data_o = op1_i + op2_i;
                         rd_addr_o = rd_addr_i;
                         rd_wen_o = 1'b1;
-                    end 
+                    end
+                    `INST_XORI:begin
+						rd_data_o = op1_i_xor_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;
+					end					
+					`INST_ORI:begin
+						rd_data_o = op1_i_or_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;
+					end					
+					`INST_ANDI:begin
+						rd_data_o = op1_i_and_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;
+					end	
+                    `INST_SLTI:begin
+						rd_data_o = {31'b0,op1_i_less_op2_i_signed};
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;
+					end					
+					`INST_SLTIU:begin
+						rd_data_o = {31'b0,op1_i_less_op2_i_unsigned};
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;
+					end					
+					`INST_SLLI:begin
+						rd_data_o = op1_i_shift_letf_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;					
+					end
+					`INST_SRI:begin
+						if(func7[5] == 1'b1) begin //SRAI
+							rd_data_o = ((op1_i_shift_right_op2_i) & SRA_mask) | ({32{op1_i[31]}} & (~SRA_mask));
+							rd_addr_o = rd_addr_i;
+							rd_wen_o  = 1'b1;							
+						end
+						else begin //SRLI
+							rd_data_o = op1_i_shift_right_op2_i;
+							rd_addr_o = rd_addr_i;
+							rd_wen_o  = 1'b1;							
+						end
+					end			
                     default: begin
                         rd_data_o = 32'b0;
                         rd_addr_o = 5'b0;

@@ -30,6 +30,7 @@ module id (
     wire[2: 0] func3;
     wire[4: 0] rs1;
     wire[11: 0] imm;
+    wire[4:0]  shamt;   //移位数，32位数最多左移5位
 
     // R型指令的额外结构，把11位立即数拆分为func7和rs2
     wire[4: 0] rs2;
@@ -42,6 +43,7 @@ module id (
     assign func3  = inst_i[14: 12];
     assign rs1    = inst_i[19: 15];
     assign imm    = inst_i[31: 20];
+    assign shamt  = inst_i[24:20];
 
     // R型指令的额外空间分配
     assign func7  = inst_i[31: 25];
@@ -53,14 +55,22 @@ module id (
         case (opcode)
             `INST_TYPE_I: begin
                 case (func3)
-                    `INST_ADDI: begin
-                        rs1_addr_o = rs1;
-                        rs2_addr_o = 5'b0;              // 立即数加法不需要从rs2取址
-                        op1_o = rs1_data_i;
-                        op2_o = {{20{imm[11]}}, imm};   // 将12位的立即数补全为32位, 此处为有符号imm, 所以只需填充最高位数值即可, 若为无符号imm则高位补0
-                        rd_addr_o = rd;                 // 目标寄存器地址
-                        reg_wen = 1'b1;                 // 寄存器写入信号置为1, 即需要写入
-                    end 
+                    `INST_ADDI,`INST_SLTI,`INST_SLTIU,`INST_XORI,`INST_ORI,`INST_ANDI:begin
+						rs1_addr_o = rs1;
+						rs2_addr_o = 5'b0;
+						op1_o 	   = rs1_data_i;
+						op2_o      = {{20{imm[11]}},imm};
+						rd_addr_o  = rd;
+						reg_wen    = 1'b1;
+					end
+					`INST_SLLI,`INST_SRI:begin
+						rs1_addr_o = rs1;
+						rs2_addr_o = 5'b0;
+						op1_o 	   = rs1_data_i;
+						op2_o      = {27'b0,shamt};
+						rd_addr_o  = rd;
+						reg_wen    = 1'b1;					
+					end
                     default: begin
                         rs1_addr_o = 5'b0;
                         rs2_addr_o = 5'b0;

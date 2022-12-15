@@ -59,13 +59,14 @@ module ex (
 
 
      // ALU
+    wire[31:0] op1_i_add_op2_i;
     wire[31:0] op1_i_xor_op2_i;
     wire[31:0] op1_i_or_op2_i;
     wire[31:0] op1_i_and_op2_i;
     wire[31:0] op1_i_shift_letf_op2_i;
     wire[31:0] op1_i_shift_right_op2_i;
 
-
+    assign op1_i_add_op2_i           = op1_i + op2_i;		// 加法器
     assign op1_i_xor_op2_i          = op1_i ^ op2_i;        // 异或
     assign op1_i_or_op2_i           = op1_i | op2_i;        // 或
     assign op1_i_and_op2_i          = op1_i & op2_i;        // 与
@@ -85,7 +86,7 @@ module ex (
                 hold_flag_o = 1'b0;
                 case (func3)
                     `INST_ADDI: begin
-                        rd_data_o = op1_i + op2_i;
+                        rd_data_o = op1_i_add_op2_i;
                         rd_addr_o = rd_addr_i;
                         rd_wen_o = 1'b1;
                     end
@@ -104,28 +105,29 @@ module ex (
 						rd_addr_o = rd_addr_i;
 						rd_wen_o  = 1'b1;
 					end	
-                    `INST_SLTI:begin
+                    `INST_SLTI:begin            // 有符号 set less than imm
 						rd_data_o = {31'b0,op1_i_less_op2_i_signed};
 						rd_addr_o = rd_addr_i;
 						rd_wen_o  = 1'b1;
 					end					
-					`INST_SLTIU:begin
+					`INST_SLTIU:begin          // 无符号 set less than imm
 						rd_data_o = {31'b0,op1_i_less_op2_i_unsigned};
 						rd_addr_o = rd_addr_i;
 						rd_wen_o  = 1'b1;
 					end					
-					`INST_SLLI:begin
+					`INST_SLLI:begin            // SLLI 逻辑左移
 						rd_data_o = op1_i_shift_letf_op2_i;
 						rd_addr_o = rd_addr_i;
 						rd_wen_o  = 1'b1;					
 					end
 					`INST_SRI:begin
-						if(func7[5] == 1'b1) begin //SRAI
+						if(func7[5] == 1'b1) begin          //SRAI 算数右移，高位需要补符号位
 							rd_data_o = ((op1_i_shift_right_op2_i) & SRA_mask) | ({32{op1_i[31]}} & (~SRA_mask));
-							rd_addr_o = rd_addr_i;
+							// (op1_i_shift_right_op2_i) & SRA_mask)取操作数， ({32{op1_i[31]}} & (~SRA_mask))取符号
+                            rd_addr_o = rd_addr_i;
 							rd_wen_o  = 1'b1;							
 						end
-						else begin //SRLI
+						else begin                          //SRLI 逻辑右移
 							rd_data_o = op1_i_shift_right_op2_i;
 							rd_addr_o = rd_addr_i;
 							rd_wen_o  = 1'b1;							
@@ -147,15 +149,58 @@ module ex (
                     `INST_ADD_SUB: begin
                         // 判断加减法
                         if (func7 == 7'b000_0000) begin
-                            rd_data_o = op1_i + op2_i;
+                            rd_data_o = op1_i_add_op2_i;
                             rd_addr_o = rd_addr_i;
                             rd_wen_o = 1'b1;
                         end else if (func7 == 7'b010_0000) begin
-                            rd_data_o = op2_i - op1_i;
+                            rd_data_o = op1_i - op2_i;
                             rd_addr_o = rd_addr_i;
                             rd_wen_o = 1'b1;
                         end
-                    end 
+                    end
+                    `INST_XOR:begin
+						rd_data_o = op1_i_xor_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;	
+					end	
+					`INST_OR:begin
+						rd_data_o = op1_i_or_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;	
+					end
+					`INST_AND:begin
+						rd_data_o = op1_i_and_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;	
+					end
+                    `INST_SLT:begin            // 有符号 set less than
+						rd_data_o = {31'b0,op1_i_less_op2_i_signed};
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;	
+					end
+					`INST_SLTU:begin          // 无符号 set less than
+						rd_data_o = {31'b0,op1_i_less_op2_i_unsigned};
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;	
+					end
+                    `INST_SLL:begin            // SLLI 逻辑左移
+						rd_data_o = op1_i_shift_letf_op2_i;
+						rd_addr_o = rd_addr_i;
+						rd_wen_o  = 1'b1;					
+					end
+                    `INST_SR:begin
+						if(func7[5] == 1'b1) begin          //SRAI 算数右移，高位需要补符号位
+							rd_data_o = ((op1_i_shift_right_op2_i) & SRA_mask) | ({32{op1_i[31]}} & (~SRA_mask));
+							// (op1_i_shift_right_op2_i) & SRA_mask)取操作数， ({32{op1_i[31]}} & (~SRA_mask))取符号
+                            rd_addr_o = rd_addr_i;
+							rd_wen_o  = 1'b1;							
+						end
+						else begin                          //SRLI 逻辑右移
+							rd_data_o = op1_i_shift_right_op2_i;
+							rd_addr_o = rd_addr_i;
+							rd_wen_o  = 1'b1;							
+						end
+					end				 
                     default: begin
                         rd_data_o = 32'b0;
                         rd_addr_o = 5'b0;

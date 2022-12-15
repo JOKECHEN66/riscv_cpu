@@ -83,14 +83,22 @@ module id (
             end 
             `INST_TYPE_R_M: begin
                 case (func3)
-                    `INST_ADD_SUB: begin
+                    `INST_ADD_SUB,`INST_XOR,`INST_OR,`INST_AND,`INST_SLT,`INST_SLTU: begin
                         rs1_addr_o = rs1;
                         rs2_addr_o = rs2;
                         op1_o = rs1_data_i;
                         op2_o = rs2_data_i;
                         rd_addr_o = rd;
                         reg_wen = 1'b1;
-                    end 
+                    end
+                    `INST_SLL,`INST_SR:begin
+						rs1_addr_o = rs1;
+						rs2_addr_o = rs2;
+						op1_o 	   = rs1_data_i;
+						op2_o      = {27'b0,rs2_data_i[4:0]};   // 32位数移位操作不超过5位
+						rd_addr_o  = rd;
+						reg_wen    = 1'b1;					
+					end 
                     default: begin
                         rs1_addr_o = 5'b0;
                         rs2_addr_o = 5'b0;

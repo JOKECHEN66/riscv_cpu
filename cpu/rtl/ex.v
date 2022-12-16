@@ -257,10 +257,18 @@ module ex (
                 endcase
             end
             `INST_JAL:begin
-				rd_data_o = inst_addr_i + 32'h4;
+				rd_data_o = op1_i_add_op2_i;
 				rd_addr_o = rd_addr_i;
 				rd_wen_o  = 1'b1;
-				jump_addr_o = op1_i + inst_addr_i;
+				jump_addr_o = base_addr_add_addr_offset;
+				jump_en_o	= 1'b1;
+				hold_flag_o = 1'b0;				
+			end
+            `INST_JALR:begin
+				rd_data_o = op1_i_add_op2_i;
+				rd_addr_o = rd_addr_i;
+				rd_wen_o  = 1'b1;
+				jump_addr_o = base_addr_add_addr_offset;
 				jump_en_o	= 1'b1;
 				hold_flag_o = 1'b0;				
 			end
@@ -271,6 +279,14 @@ module ex (
 				jump_addr_o = 32'b0;
 				jump_en_o	= 1'b0;
 				hold_flag_o = 1'b0;			
+			end
+            `INST_AUIPC:begin
+				rd_data_o = op1_i_add_op2_i;
+				rd_addr_o = rd_addr_i;
+				rd_wen_o  = 1'b1;
+				jump_addr_o = 32'b0;
+				jump_en_o	= 1'b0;
+				hold_flag_o = 1'b0;				
 			end		
             default: begin
                 rd_data_o = 32'b0;

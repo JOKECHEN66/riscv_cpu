@@ -144,25 +144,48 @@ module id (
                 endcase
             end
             `INST_JAL: begin
-                // J型指令需要将当前PC + 4存入寄存器中
 				rs1_addr_o = 5'b0;
 				rs2_addr_o = 5'b0;
-				op1_o 	   = {{12{inst_i[31]}}, inst_i[19:12], inst_i[20], inst_i[30:21], 1'b0};
-				op2_o      = 32'b0;
+                // J型指令需要将当前PC + 4存入寄存器中
+				op1_o 	   = inst_addr_i;
+				op2_o      = 32'h4;
 				rd_addr_o  = rd;
 				reg_wen    = 1'b1;
-                base_addr_o		= inst_addr_i;
+                // JAL 跳转地址为PC+imm
+				base_addr_o		= inst_addr_i;
 				addr_offset_o	= {{12{inst_i[31]}}, inst_i[19:12], inst_i[20], inst_i[30:21], 1'b0};
+			end
+            `INST_JALR: begin
+				rs1_addr_o = rs1;
+				rs2_addr_o = 5'b0;
+                // J型指令需要将当前PC + 4存入寄存器中
+				op1_o 	   = inst_addr_i;
+				op2_o      = 32'h4;
+				rd_addr_o  = rd;
+				reg_wen    = 1'b1;
+                // JAL 跳转地址为rs1+imm
+				base_addr_o		= rs1_data_i;
+				addr_offset_o	= {{20{imm[11]}},imm};
 			end
 			`INST_LUI: begin
 				rs1_addr_o = 5'b0;
 				rs2_addr_o = 5'b0;
-				op1_o 	   = {inst_i[31:12], 12'b0};
+				op1_o 	   = {inst_i[31:12], 12'b0};        // rd = imm << 12
 				op2_o      = 32'b0;
 				rd_addr_o  = rd;
 				reg_wen    = 1'b1;
                 base_addr_o		= 32'b0;
 				addr_offset_o	= 32'b0;							
+			end
+            `INST_AUIPC:begin
+				rs1_addr_o = 5'b0;
+				rs2_addr_o = 5'b0;
+				op1_o 	   = {inst_i[31:12],12'b0};         // rd = (imm << 12) + PC
+				op2_o      = inst_addr_i;
+				rd_addr_o  = rd;
+				reg_wen    = 1'b1;	
+				base_addr_o		= 32'b0;
+				addr_offset_o	= 32'b0;				
 			end			
             default: begin
                 rs1_addr_o = 5'b0;

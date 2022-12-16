@@ -78,11 +78,4 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	id
 
-} {} {}} F:/risc_cpu/cpu/rtl/ex.v {1 {vlog -work work -vopt -stats=none F:/risc_cpu/cpu/rtl/ex.v
-Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
--- Compiling module ex
-
-Top level modules:
-	ex
-
 } {} {}}

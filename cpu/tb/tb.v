@@ -9,11 +9,6 @@ module tb;
 
     integer r;
 
-    riscv_cpu_soc riscv_cpu_soc_inst(
-        .clk            (clk),
-        .rst            (rst)
-    );
-
     always #10 clk = ~clk;
 
     initial begin
@@ -28,7 +23,8 @@ module tb;
 
     // 将testbench指令读入rom中
     initial begin
-        $readmemh(".\\inst_txt\\rv32ui-p-jalr.txt", tb.riscv_cpu_soc_inst.rom_inst.rom_mem);
+        // 第一个参数是文件名，第二个参数是要写到哪个寄存器里
+        $readmemh("./inst_txt/rv32ui-p-sw.txt",tb.riscv_cpu_soc_inst.rom_inst.rom_32bit.dual_ram_template_inst.memory);
     end
 
     initial begin
@@ -49,10 +45,12 @@ module tb;
                 $display("x%2d regisiter value is %d", r, tb.riscv_cpu_soc_inst.riscv_cpu_inst.regs_inst.regs[r]);
             end
         end
-        $display("%d", x3);
-        $display("%d", x26);
-        $display("%d", x27);
-
+        //$finish;
     end
+
+    riscv_cpu_soc riscv_cpu_soc_inst(
+        .clk            (clk),
+        .rst            (rst)
+    );
 
 endmodule

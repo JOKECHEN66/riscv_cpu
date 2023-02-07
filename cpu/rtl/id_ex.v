@@ -15,8 +15,8 @@ module id_ex (
     input wire[31: 0] op2_i,
     input wire[4: 0]  rd_addr_i,
     input wire        reg_wen_i,
-    input wire[31:0] base_addr_i,
-	input wire[31:0] addr_offset_i,
+    input wire[31:0]  base_addr_i,
+	input wire[31:0]  addr_offset_i,
 
     // to ex
     output wire[31: 0] inst_o,
@@ -25,8 +25,8 @@ module id_ex (
     output wire[31: 0] op2_o,
     output wire[4: 0]  rd_addr_o,
     output wire        reg_wen_o,
-    output wire[31:0] base_addr_o,
-	output wire[31:0] addr_offset_o	
+    output wire[31:0]  base_addr_o,
+	output wire[31:0]  addr_offset_o	
 );
     // 原理同if_id
     dff_set #(32) dff1(clk, rst, hold_flag_i, `INST_NOP, inst_i, inst_o);

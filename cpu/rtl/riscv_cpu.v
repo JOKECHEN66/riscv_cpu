@@ -2,11 +2,25 @@
 module riscv_cpu (
 	input  wire 		  clk,
 	input  wire 		  rst,
+
+	// 指令
 	input  wire [31:0]    inst_i,
-	output wire [31:0]    inst_addr_o
+	output wire [31:0]    inst_addr_o,
+
+	// read mem
+	input wire[31:0] mem_rd_data_i,
+	output wire mem_rd_req_o,
+	output wire[31:0] mem_rd_addr_o,
+	
+	// write mem
+	output wire mem_wr_req_o,
+	output wire[3:0] mem_wr_sel_o,
+	output wire[31:0] mem_wr_addr_o,
+	output wire[31:0] mem_wr_data_o
 );
-	// pc to if
+	// pc 不再直接给到 if 模块，而是给到 rom
 	wire[31:0] pc_reg_pc_o;
+	assign inst_addr_o = pc_reg_pc_o;
 	
 	// if to if_id
 	wire[31:0] if_inst_addr_o;
@@ -50,37 +64,37 @@ module riscv_cpu (
 	wire[31:0] id_ex_addr_offset_o;
 
 	// ex to ctrl
-	wire [31: 0] ex_jump_arrd_o;
+	wire [31: 0] ex_jump_addr_o;
 	wire 		 ex_jump_en_o;
 	wire 		 ex_hold_flag_o;
 
 	// ctrl to pc, if_id, id_ex
-	wire [31: 0] ctrl_jump_arrd_o;
+	wire [31: 0] ctrl_jump_addr_o;
 	wire 		 ctrl_jump_en_o;
 	wire 		 ctrl_hold_flag_o;
 	
 	pc_reg pc_reg_inst(
 		.clk			(clk),
 		.rst			(rst),
-		.jump_addr_i	(ctrl_jump_arrd_o),
+		.jump_addr_i	(ctrl_jump_addr_o),
 		.jump_en		(ctrl_jump_en_o),
 		.pc_o   		(pc_reg_pc_o)
 	);
 	
-	ifetch ifetch_inst(
-		.pc_addr_i		(pc_reg_pc_o),
-		.rom_inst_i		(inst_i),
-		.if2rom_addr_o	(inst_addr_o), 
-		.inst_addr_o	(if_inst_addr_o), 
-		.inst_o         (if_inst_o)
-	);
+	// ifetch ifetch_inst(
+	// 	.pc_addr_i		(pc_reg_pc_o),
+	// 	.rom_inst_i		(inst_i),
+	// 	.if2rom_addr_o	(inst_addr_o), 
+	// 	.inst_addr_o	(if_inst_addr_o), 
+	// 	.inst_o         (if_inst_o)
+	// );
 
 	if_id if_id_inst(
 		.clk			(clk),
 		.rst			(rst),
 		.hold_flag_i	(ctrl_hold_flag_o),
-		.inst_i			(if_inst_o),  
-		.inst_addr_i	(if_inst_addr_o),  
+		.inst_i			(inst_i),  
+		.inst_addr_i	(pc_reg_pc_o),  
 		.inst_addr_o	(if_id_inst_addr_o), 
 		.inst_o         (if_id_inst_o)
 	);
@@ -148,16 +162,16 @@ module riscv_cpu (
 		.rd_addr_o		(ex_rd_addr_o),
 		.rd_data_o		(ex_rd_data_o),	
 		.rd_wen_o       (ex_reg_wen_o),
-		.jump_addr_o	(ex_jump_arrd_o),
+		.jump_addr_o	(ex_jump_addr_o),
     	.jump_en_o		(ex_jump_en_o),
     	.hold_flag_o	(ex_hold_flag_o)
 	);
 
 	ctrl ctrl_inst(
-		.jump_addr_i	(ex_jump_arrd_o),
+		.jump_addr_i	(ex_jump_addr_o),
     	.jump_en_i		(ex_jump_en_o),
     	.hold_flag_ex_i	(ex_hold_flag_o),
-    	.jump_addr_o	(ctrl_jump_arrd_o),
+    	.jump_addr_o	(ctrl_jump_addr_o),
     	.jump_en_o		(ctrl_jump_en_o),
     	.hold_flag_o	(ctrl_hold_flag_o)
 	);

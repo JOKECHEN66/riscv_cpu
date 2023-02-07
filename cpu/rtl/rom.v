@@ -1,14 +1,32 @@
 module rom (
-    input wire[31: 0] inst_addr_i,
-    output reg[31: 0] inst_o
+    input wire         clk,
+    input wire         rst,
+    input wire         wen,  // 写端口
+    input wire[32-1:0] w_addr_i,
+    input wire[32-1:0] w_data_i,
+    input wire         ren,  // 读端口
+    input wire[32-1:0] r_addr_i,
+    output wire[32-1:0] r_data_o
 );
 
-    // 分配一个4096 * 32b的rom内存, 即16KB的内存
-    reg[31: 0] rom_mem[0: 4095];
+    wire[11:0] w_addr = w_addr_i[13:2];
+    wire[11:0] r_addr = r_addr_i[13:2];
 
-    always @(*) begin
-        // 右移2位即除4, 由于risc是大端模式, 所以pc + 4即地址右移2位取址
-        inst_o = rom_mem[inst_addr_i >> 2];
-    end
+    dual_ram #(
+        .DW (32),
+        .AW (12),
+        .MEM_NUM (4096)
+    )
+    rom_32bit
+    (
+        .clk      (clk),
+        .rst      (rst),
+        .wen      (wen),
+        .w_addr_i (w_addr),
+        .w_data_i (w_data_i),
+        .ren     (ren),
+        .r_addr_i (r_addr),
+        .r_data_o (r_data_o)
+    );
 
 endmodule

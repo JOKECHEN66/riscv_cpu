@@ -1,0 +1,13 @@
+------------
+FPAG引脚说明
+------------
+
+clk - U18 - LVCMOS33 - 晶振源
+
+rst - M15 - LVCMOS33 - KEY1
+
+over - J14 - LVCMOS33 - LED1
+
+succ - K14 - LVCMOS33 - LED2
+
+uart_debug_pin - M14 - LVCMOS33 - KEY2

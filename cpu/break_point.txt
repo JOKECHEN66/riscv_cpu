@@ -1,3 +1,0 @@
-11--00:00
-read code in regs
-Q: how JAL and BNE/BEQ inst work?

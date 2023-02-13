@@ -1,0 +1,23 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v,1675940153,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,clint,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v,1675936120,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,csr_reg,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v,1675936115,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,ctrl,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,1675936110,verilog,,,,,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v,1675936106,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,div,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v,1675936099,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,ex,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v,1675936090,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v,,gen_en_dff;gen_pipe_dff;gen_rst_0_dff;gen_rst_1_dff;gen_rst_def_dff,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v,1675936080,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,id,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v,1675936084,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,id_ex,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v,1675935917,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,if_id,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v,1676019880,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,pc_reg,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v,1675936063,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,regs,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v,1676174906,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,rib,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v,1676020571,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,riscv_cpu,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v,1676174675,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,ram,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v,1675935855,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,rom,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v,1675935870,verilog,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v,,uart_debug,,,,,,,,
+C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v,1676174562,verilog,,,C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v,riscv_cpu_soc_top,,,,,,,,

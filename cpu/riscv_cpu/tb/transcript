@@ -1,0 +1,143 @@
+# Reading D:/ModelSim/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/testbench.mpf
+# Loading project testbench
+# Compile of tb.v was successful.
+# Compile of rib.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# vsim -gui work.tb 
+# Start time: 18:19:04 on Feb 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2685) [TFMPC] - Too few port connections for 'riscv_cpu_soc_inst_top'.  Expected 5, found 3.
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2718) [TFMPC] - Missing connection for port 'succ'.
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2718) [TFMPC] - Missing connection for port 'over'.
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.riscv_cpu_soc_top(fast)
+run 1ms
+# ** Warning: (vsim-PLI-3410) Illegal character '"' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '@' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.bin".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# Loading is done...
+run 2ms
+quit -sim
+# End time: 18:21:55 on Feb 12,2023, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 15
+# Compile of tb.v was successful.
+vsim -gui work.tb
+# vsim -gui work.tb 
+# Start time: 18:22:33 on Feb 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2685) [TFMPC] - Too few port connections for 'riscv_cpu_soc_inst_top'.  Expected 5, found 3.
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2718) [TFMPC] - Missing connection for port 'succ'.
+# ** Warning: C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(15): (vopt-2718) [TFMPC] - Missing connection for port 'over'.
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.riscv_cpu_soc_top(fast)
+run 2ms
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character 'L' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '' in data on line 1 of file ".\os.elf".    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# ** Warning: (vsim-PLI-3410) Illegal character '    : C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v(94)
+#    Time: 0 ns  Iteration: 0  Instance: /tb
+# Loading is done...
+quit -sim
+# End time: 18:23:25 on Feb 12,2023, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 37

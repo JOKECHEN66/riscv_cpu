@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../riscv_cpu/rtl/core/clint.v" \
+"../../../../../riscv_cpu/rtl/core/csr_reg.v" \
+"../../../../../riscv_cpu/rtl/core/ctrl.v" \
+"../../../../../riscv_cpu/rtl/core/div.v" \
+"../../../../../riscv_cpu/rtl/core/ex.v" \
+"../../../../../riscv_cpu/rtl/core/gen_dff.v" \
+"../../../../../riscv_cpu/rtl/core/id.v" \
+"../../../../../riscv_cpu/rtl/core/id_ex.v" \
+"../../../../../riscv_cpu/rtl/core/if_id.v" \
+"../../../../../riscv_cpu/rtl/core/pc_reg.v" \
+"../../../../../riscv_cpu/rtl/perips/ram.v" \
+"../../../../../riscv_cpu/rtl/core/regs.v" \
+"../../../../../riscv_cpu/rtl/core/rib.v" \
+"../../../../../riscv_cpu/rtl/core/riscv_cpu.v" \
+"../../../../../riscv_cpu/rtl/perips/rom.v" \
+"../../../../../riscv_cpu/rtl/perips/uart_debug.v" \
+"../../../../../riscv_cpu/rtl/soc/riscv_cpu_soc_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -4,7 +4,7 @@ CROSS_COMPILE = riscv64-unknown-elf-
 QEMU = qemu-system-riscv32
 
 # 指定目标架构（-march=rv32imc）和 ABI（-mabi=ilp32）
-CFLAGS = -nostdlib -fno-builtin -march=rv32imc -mabi=ilp32 -g -Wall
+CFLAGS = -nostdlib -fno-builtin -march=rv32im -mabi=ilp32 -g -Wall
 QFLAGS = -nographic -smp 1 -machine virt -bios none
 
 # 定义了包含工具和实用程序名称的变量，C 编译器（CC）、对象复制实用程序（OBJCOPY）和对象转储实用程序（OBJDUMP）

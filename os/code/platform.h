@@ -3,6 +3,7 @@
 
 /*
  * QEMU RISC-V Virt machine with 16550a UART and VirtIO MMIO
+ * 定义了调试器平台的参数
  */
 
 /* 

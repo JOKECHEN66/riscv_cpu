@@ -1,6 +1,6 @@
 #include "os.h"
 
-/* defined in entry.S */
+/* 调用了在entry.S中定义的switch_to函数 */
 extern void switch_to(struct context *next);
 
 #define MAX_TASKS 10
@@ -9,8 +9,8 @@ uint8_t task_stack[MAX_TASKS][STACK_SIZE];
 struct context ctx_tasks[MAX_TASKS];
 
 /*
- * _top is used to mark the max available position of ctx_tasks
- * _current is used to point to the context of current task
+ * _top指向task stack的top
+ * _current指向current task
  */
 static int _top = 0;
 static int _current = -1;
@@ -26,7 +26,7 @@ void sched_init()
 }
 
 /*
- * implment a simple cycle FIFO schedular
+ * 先进先出的循环队列，每次调用 都会切换到下一个任务
  */
 void schedule()
 {
@@ -71,7 +71,7 @@ void task_yield()
 }
 
 /*
- * a very rough implementaion, just to consume the cpu
+ * CPU空转/数数 
  */
 void task_delay(volatile int count)
 {

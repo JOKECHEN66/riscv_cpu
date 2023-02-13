@@ -15,7 +15,7 @@ extern void uart_puts(char *s);
 extern int  printf(const char* s, ...);
 extern void panic(char *s);
 
-/* task management */
+/* 定义了进程context所包含的寄存器，保存进程上下文就是保存这些寄存器 */
 struct context {
 	/* ignore x0 */
 	reg_t ra;

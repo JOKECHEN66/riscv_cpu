@@ -1,7 +1,4 @@
-# save all General-Purpose(GP) registers to context
-# struct context *base = &ctx_task;
-# base->ra = ra;
-# ......
+# 进程切换，保存原进程上下文
 .macro reg_save base
 	sw ra, 0(\base)
 	sw sp, 4(\base)
@@ -33,15 +30,10 @@
 	sw t3, 108(\base)
 	sw t4, 112(\base)
 	sw t5, 116(\base)
-	# we don't save t6 here, due to we have used
-	# it as base, we have to save t6 in an extra step
-	# outside of reg_save
+	# t6寄存器不在此进行保存，放在了switch_to函数中进行保存
 .endm
 
-# restore all General-Purpose(GP) registers from the context
-# struct context *base = &ctx_task;
-# ra = base->ra;
-# ......
+# 切换的进程结束后，恢复上一个进程的上下文
 .macro reg_restore base
 	lw ra, 0(\base)
 	lw sp, 4(\base)
@@ -77,9 +69,7 @@
 .endm
 
 # Something to note about save/restore:
-# - We use mscratch to hold a pointer to context of previous task
-# - We use t6 as the 'base' for reg_save/reg_restore, because it is the
-#   very bottom register (x31) and would not be overwritten during loading.
+# 使用mscratch寄存器来保存上一个进程的指针，使用t6寄存器来作为上述两个函数的基址寄存器(因为其位置在最下面，一般不会被覆写)
 
 .text
 

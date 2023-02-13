@@ -7,7 +7,7 @@
 
 	.text
 _start:
-	# park harts with id != 0
+	# hart id != 0的直接挂起，id=0的进行启动初始化
 	csrr	t0, mhartid		# read current hart id
 	mv	tp, t0			# keep CPU's hartid in its tp for later usage.
 	bnez	t0, park		# if we're not on the hart 0
@@ -22,8 +22,7 @@ _start:
 	addi	a0, a0, 4
 	bltu	a0, a1, 1b
 2:
-	# Setup stacks, the stack grows from bottom to top, so we put the
-	# stack pointer to the very end of the stack range.
+	# 初始化栈
 	slli	t0, t0, 10		# shift left the hart id by 1024
 	la	sp, stacks + STACK_SIZE	# set the initial stack pointer
 					# to the end of the first stack space

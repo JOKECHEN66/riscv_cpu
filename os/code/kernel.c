@@ -14,12 +14,16 @@ void start_kernel(void)
 	uart_init();
 	uart_puts("Hello, OS!\n");
 
-	sched_init();
+	// sched_init();
 
-	os_main();
+	// os_main();
 
-	schedule();
+	// schedule();
 
-	while (1) {}; // stop here!
+    // End flag
+    asm volatile("li s11,  1" : :);
+
+    uart_puts("End OS");
+	// while (1) {}; // stop here!
 }
 

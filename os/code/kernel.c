@@ -11,8 +11,8 @@ extern void os_main(void);
 
 void start_kernel(void)
 {
-	uart_init();
-	uart_puts("Hello, OS!\n");
+	// uart_init();
+	// uart_puts("Hello, OS!\n");
 
 	// sched_init();
 
@@ -23,7 +23,7 @@ void start_kernel(void)
     // End flag
     asm volatile("li s11,  1" : :);
 
-    uart_puts("End OS");
+    // uart_puts("End OS");
 	// while (1) {}; // stop here!
 }
 

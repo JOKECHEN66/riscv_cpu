@@ -1,0 +1,40 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clint
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module csr_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gen_pipe_dff
+INFO: [VRFC 10-311] analyzing module gen_rst_0_dff
+INFO: [VRFC 10-311] analyzing module gen_rst_1_dff
+INFO: [VRFC 10-311] analyzing module gen_rst_def_dff
+INFO: [VRFC 10-311] analyzing module gen_en_dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module riscv_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_debug
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module riscv_cpu_soc_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

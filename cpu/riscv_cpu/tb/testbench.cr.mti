@@ -1,0 +1,138 @@
+C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v {1 {vlog -work work -vopt -sv -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module clint
+
+Top level modules:
+	clint
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module div
+
+Top level modules:
+	div
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module csr_reg
+
+Top level modules:
+	csr_reg
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module id_ex
+
+Top level modules:
+	id_ex
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module if_id
+
+Top level modules:
+	if_id
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module uart_debug
+
+Top level modules:
+	uart_debug
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module rib
+
+Top level modules:
+	rib
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module id
+
+Top level modules:
+	id
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module ex
+
+Top level modules:
+	ex
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module riscv_cpu
+
+Top level modules:
+	riscv_cpu
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/defines.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module riscv_cpu_soc_top
+
+Top level modules:
+	riscv_cpu_soc_top
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module regs
+
+Top level modules:
+	regs
+
+} {} {}} C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v {1 {vlog -work work -vopt -stats=none C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module gen_pipe_dff
+-- Compiling module gen_rst_0_dff
+-- Compiling module gen_rst_1_dff
+-- Compiling module gen_rst_def_dff
+-- Compiling module gen_en_dff
+
+Top level modules:
+	gen_pipe_dff
+	gen_rst_0_dff
+	gen_rst_1_dff
+	gen_rst_def_dff
+	gen_en_dff
+
+} {} {}}

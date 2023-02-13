@@ -1,0 +1,8 @@
+rv32um-p-div.txt
+rv32um-p-divu.txt
+rv32um-p-mul.txt
+rv32um-p-mulh.txt
+rv32um-p-mulhsu.txt
+rv32um-p-mulhu.txt
+rv32um-p-rem.txt
+rv32um-p-remu.txt

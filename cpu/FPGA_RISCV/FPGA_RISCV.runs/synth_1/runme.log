@@ -1,0 +1,579 @@
+
+*** Running vivado
+    with args -log riscv_cpu_soc_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source riscv_cpu_soc_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source riscv_cpu_soc_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.srcs/utils_1/imports/synth_1/riscv_cpu_soc_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.srcs/utils_1/imports/synth_1/riscv_cpu_soc_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top riscv_cpu_soc_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9232
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1234.531 ; gain = 409.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'riscv_cpu_soc_top' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:4]
+INFO: [Synth 8-6085] Hierarchical reference on 'regs' stops possible memory inference [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v:28]
+INFO: [Synth 8-6157] synthesizing module 'riscv_cpu' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v:4]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v:5]
+INFO: [Synth 8-6157] synthesizing module 'regs' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v:4]
+INFO: [Synth 8-6085] Hierarchical reference on 'regs' stops possible memory inference [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'regs' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v:4]
+INFO: [Synth 8-6157] synthesizing module 'csr_reg' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'csr_reg' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v:4]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gen_pipe_dff' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'gen_pipe_dff' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+INFO: [Synth 8-6157] synthesizing module 'gen_pipe_dff__parameterized0' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+	Parameter DW bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'gen_pipe_dff__parameterized0' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v:4]
+INFO: [Synth 8-6157] synthesizing module 'id' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v:5]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v:90]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'id' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v:5]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gen_pipe_dff__parameterized1' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+	Parameter DW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'gen_pipe_dff__parameterized1' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+INFO: [Synth 8-6157] synthesizing module 'gen_pipe_dff__parameterized2' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+	Parameter DW bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'gen_pipe_dff__parameterized2' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ex' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v:5]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v:240]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v:339]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v:5]
+INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'div' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clint' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clint' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_cpu' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rib' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v:5]
+INFO: [Synth 8-226] default block is never used [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v:105]
+INFO: [Synth 8-6155] done synthesizing module 'rib' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v:5]
+INFO: [Synth 8-6157] synthesizing module 'uart_debug' [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:27]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:91]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:203]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:219]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:239]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:252]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:271]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:289]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:307]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:325]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:343]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:362]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:387]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:406]
+INFO: [Synth 8-6155] done synthesizing module 'uart_debug' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_cpu_soc_top' (0#1) [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:4]
+WARNING: [Synth 8-3848] Net raddr_o in module/entity clint does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v:40]
+WARNING: [Synth 8-3848] Net m2_addr_i in module/entity riscv_cpu_soc_top does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:32]
+WARNING: [Synth 8-3848] Net m2_data_i in module/entity riscv_cpu_soc_top does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:33]
+WARNING: [Synth 8-3848] Net m2_req_i in module/entity riscv_cpu_soc_top does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:35]
+WARNING: [Synth 8-3848] Net m2_we_i in module/entity riscv_cpu_soc_top does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:36]
+WARNING: [Synth 8-3848] Net int_flag in module/entity riscv_cpu_soc_top does not have driver. [C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v:61]
+WARNING: [Synth 8-7129] Port clk in module rib is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module rib is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m1_req_i in module rib is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[31] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[30] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[29] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[28] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[27] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[26] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[25] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[24] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[23] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[22] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[21] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[20] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[19] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[18] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[17] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[16] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[15] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[14] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[1] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[0] in module ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[31] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[30] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[29] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[28] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[27] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[26] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[25] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[24] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[23] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[22] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[21] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[20] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[19] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[18] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[17] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[16] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[15] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[14] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[1] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_i[0] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[31] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[30] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[29] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[28] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[27] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[26] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[25] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[24] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[23] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[22] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[21] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[20] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[19] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[18] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[17] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[16] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[15] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[14] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[13] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[12] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[11] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[10] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[9] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[8] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[7] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[6] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[5] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[4] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[3] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[2] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[1] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr_o[0] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold_flag_i[2] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold_flag_i[1] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold_flag_i[0] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[31] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[30] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[29] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[28] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[27] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[26] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[25] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[24] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[23] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[22] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[21] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[20] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[19] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[18] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[17] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[16] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[15] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[14] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[13] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[12] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[11] in module clint is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[10] in module clint is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1391.508 ; gain = 566.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1391.508 ; gain = 566.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1391.508 ; gain = 566.254
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 1391.508 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.srcs/constrs_2/new/FPGA.xdc]
+Finished Parsing XDC File [C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.srcs/constrs_2/new/FPGA.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.srcs/constrs_2/new/FPGA.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/riscv_cpu_soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/riscv_cpu_soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1484.535 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1484.535 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'div'
+INFO: [Synth 8-802] inferred FSM for state register 'csr_state_reg' in module 'clint'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_debug'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_IDLE |                             0001 |                             0001
+             STATE_START |                             0010 |                             0010
+              STATE_CALC |                             0100 |                             0100
+               STATE_END |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'div'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              S_CSR_IDLE |                            00001 |                            00001
+              S_CSR_MEPC |                            00100 |                            00100
+           S_CSR_MSTATUS |                            00010 |                            00010
+            S_CSR_MCAUSE |                            10000 |                            10000
+      S_CSR_MSTATUS_MRET |                            01000 |                            01000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'csr_state_reg' in module 'clint'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  S_IDLE |                   00000000000001 |                   00000000000001
+        S_INIT_UART_BAUD |                   00000000000010 |                   00000000000010
+      S_REC_FIRST_PACKET |                   00000001000000 |                   00000001000000
+S_CLEAR_UART_RX_OVER_FLAG |                   00000000000100 |                   00000000000100
+             S_WAIT_BYTE |                   00000000001000 |                   00000000001000
+            S_WAIT_BYTE2 |                   00000000010000 |                   00000000010000
+              S_GET_BYTE |                   00000000100000 |                   00000000100000
+             S_CRC_START |                   00010000000000 |                   00010000000000
+              S_CRC_CALC |                   00100000000000 |                   00100000000000
+               S_CRC_END |                   01000000000000 |                   01000000000000
+             S_WRITE_MEM |                   10000000000000 |                   10000000000000
+              S_SEND_ACK |                   00000100000000 |                   00000100000000
+              S_SEND_NAK |                   00001000000000 |                   00001000000000
+     S_REC_REMAIN_PACKET |                   00000010000000 |                   00000010000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'uart_debug'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 14    
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 68    
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 139   
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 138   
+	   9 Input   32 Bit        Muxes := 2     
+	   8 Input   32 Bit        Muxes := 2     
+	  13 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 16    
+	  11 Input   32 Bit        Muxes := 5     
+	   7 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 8     
+	   3 Input   32 Bit        Muxes := 1     
+	  15 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 16    
+	   4 Input   28 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 4     
+	  15 Input   16 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
+	  15 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	  13 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   5 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 6     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 19    
+	   3 Input    5 Bit        Muxes := 2     
+	  13 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 3     
+	  13 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 5     
+	  11 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 180   
+	   7 Input    1 Bit        Muxes := 6     
+	   8 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 7     
+	  13 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 139   
+	  11 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 14    
+	  15 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_temp, operation Mode is: A*B.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: Generating DSP mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: Generating DSP mul_temp, operation Mode is: A*B.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: Generating DSP mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------+----------------+-----------+----------------------+------------------+
+|Module Name       | RTL Object     | Inference | Size (Depth x Width) | Primitives       | 
++------------------+----------------+-----------+----------------------+------------------+
+|riscv_cpu_soc_top | u_rom/_rom_reg | Implied   | 4 K x 32             | RAM256X1S x 512  | 
+|riscv_cpu_soc_top | u_ram/_ram_reg | Implied   | 4 K x 32             | RAM256X1S x 512  | 
++------------------+----------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ex          | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1484.535 ; gain = 659.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------------+----------------+-----------+----------------------+------------------+
+|Module Name       | RTL Object     | Inference | Size (Depth x Width) | Primitives       | 
++------------------+----------------+-----------+----------------------+------------------+
+|riscv_cpu_soc_top | u_rom/_rom_reg | Implied   | 4 K x 32             | RAM256X1S x 512  | 
+|riscv_cpu_soc_top | u_ram/_ram_reg | Implied   | 4 K x 32             | RAM256X1S x 512  | 
++------------------+----------------+-----------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1608.125 ; gain = 782.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ex          | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | PCIN>>17+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | PCIN>>17+A*B | 17     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   182|
+|3     |DSP48E1   |     4|
+|4     |LUT1      |   291|
+|5     |LUT2      |   466|
+|6     |LUT3      |   748|
+|7     |LUT4      |  1195|
+|8     |LUT5      |   510|
+|9     |LUT6      |  3674|
+|10    |MUXF7     |   665|
+|11    |MUXF8     |   273|
+|12    |RAM256X1S |  1024|
+|13    |FDRE      |  3270|
+|14    |FDSE      |     5|
+|15    |IBUF      |     3|
+|16    |OBUF      |     2|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 214 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:03 ; elapsed = 00:01:14 . Memory (MB): peak = 1621.688 ; gain = 703.406
+Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1621.688 ; gain = 796.434
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1621.688 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1621.688 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1024 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 1024 instances
+
+Synth Design complete, checksum: 8898cabf
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1621.688 ; gain = 1202.504
+INFO: [Common 17-1381] The checkpoint 'C:/Users/JOKECHEN/Desktop/FPGA_RISCV/FPGA_RISCV.runs/synth_1/riscv_cpu_soc_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file riscv_cpu_soc_top_utilization_synth.rpt -pb riscv_cpu_soc_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 12 12:32:01 2023...

@@ -1,0 +1,484 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ModelSim/examples
+T_opt
+!s110 1676197353
+V3T@cc[SIE7TFk[Szihfnk3
+04 2 4 work tb fast 0
+=1-04421a004810-63e8bde9-25f-4190
+o-quiet -auto_acc_if_foreign -work work
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vclint
+Z1 !s110 1676174718
+!i10b 1
+!s100 bB1lA=A@3XU]EaI^>061C2
+I;anXHe>gQT>8<?l2ech6a2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/JOKECHEN/Desktop/riscv_cpu/tb
+w1675940153
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v
+L0 6
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1676174718.000000
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/clint.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vcsr_reg
+R1
+!i10b 1
+!s100 QA@CNREBf8XVA4U;@?8[N3
+IPbV=SgIRU91ClgfbG:GcK3
+R2
+R3
+w1675936120
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/csr_reg.v|
+!i113 0
+R6
+R0
+vctrl
+R1
+!i10b 1
+!s100 hz_D_L^Il<0Ag^Fkz_7a?1
+I86]h30KbKFb2jVN85fO:31
+R2
+R3
+w1675936115
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ctrl.v|
+!i113 0
+R6
+R0
+vdiv
+Z7 !s110 1676174719
+!i10b 1
+!s100 @z<HEgM5kiGdROnBa;9OE2
+I75B[1>`nT2ef>P]J4CoE@3
+R2
+R3
+w1675936106
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/div.v|
+!i113 0
+R6
+R0
+vex
+R7
+!i10b 1
+!s100 ;oOQbXRFN87Eai^`YO1Zf1
+IRkVliNz<4=^a93K4UPWnh0
+R2
+R3
+w1675936099
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v
+L0 5
+R4
+r1
+!s85 0
+31
+Z8 !s108 1676174719.000000
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/ex.v|
+!i113 0
+R6
+R0
+vgen_en_dff
+R7
+!i10b 1
+!s100 TCIUB<IBFob7Ga^2WH0983
+IA^KgeXVk[Ic8ZXEC_QOlf3
+R2
+R3
+Z9 w1675936090
+Z10 8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v
+Z11 FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v
+L0 109
+R4
+r1
+!s85 0
+31
+R8
+Z12 !s107 C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/gen_dff.v|
+!i113 0
+R6
+R0
+vgen_pipe_dff
+R7
+!i10b 1
+!s100 Ji=OAH_72WjChfmW>=d;E3
+ISN=l<_Y:`:ag<0<gchi0[2
+R2
+R3
+R9
+R10
+R11
+L0 2
+R4
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 0
+R6
+R0
+vgen_rst_0_dff
+R7
+!i10b 1
+!s100 XMz?c;MJZ]a]cQ8gW]o3T3
+IICcHm45UHY1K^BT23<3D62
+R2
+R3
+R9
+R10
+R11
+L0 30
+R4
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 0
+R6
+R0
+vgen_rst_1_dff
+R7
+!i10b 1
+!s100 lMiCO9`5_J>aO7XzoJS5R3
+Ih;Lhmkzd:lcf8CfN1bV3n0
+R2
+R3
+R9
+R10
+R11
+L0 56
+R4
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 0
+R6
+R0
+vgen_rst_def_dff
+R7
+!i10b 1
+!s100 KS9<3^fa]`M^UY]BY6R<11
+I<E>jn7ESmCeNLQQDU7kRz0
+R2
+R3
+R9
+R10
+R11
+L0 82
+R4
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 0
+R6
+R0
+vid
+R7
+!i10b 1
+!s100 7UPWC;UmGn<P3M0FXaM851
+I3ID9]bR1zmmJ3omAd[z]Q0
+R2
+R3
+w1675936080
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v
+L0 5
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id.v|
+!i113 0
+R6
+R0
+vid_ex
+R7
+!i10b 1
+!s100 DKmUHBGXF0`_B^ZXRWeEK0
+IZ;JB^P@1Z?`GJIUWi4mml1
+R2
+R3
+w1675936084
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/id_ex.v|
+!i113 0
+R6
+R0
+vif_id
+R7
+!i10b 1
+!s100 47Sa<LI:O8i>QXEPdO^l]3
+IPzZ>2dl8@o]`R0dF_:VV63
+R2
+R3
+w1675935917
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/if_id.v|
+!i113 0
+R6
+R0
+vpc_reg
+R7
+!i10b 1
+!s100 XYm5oOfcLR0U=U`DEc<SR3
+I_Vh9JGI@dVemdB2KhWBoZ2
+R2
+R3
+w1676019880
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/pc_reg.v|
+!i113 0
+R6
+R0
+vram
+R7
+!i10b 1
+!s100 Uaf=XnMLbVKMPzMPUW?5[3
+I6;glDeSh:?28KYI6Zl:d30
+R2
+R3
+w1676174675
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\perips\..\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/ram.v|
+!i113 0
+R6
+R0
+vregs
+R7
+!i10b 1
+!s100 TX[6MkcMD6BXFaJ]MGLkU1
+IlP]ScfB4n3kUhG5NJC2Aj0
+R2
+R3
+w1675936063
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/regs.v|
+!i113 0
+R6
+R0
+vrib
+!s110 1676197130
+!i10b 1
+!s100 F2<XTHJbb6D6eXb99FX<>2
+IijoAbBO6gN2YK<2XhYKK[0
+R2
+R3
+w1676174906
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v
+L0 5
+R4
+r1
+!s85 0
+31
+!s108 1676197130.000000
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/rib.v|
+!i113 0
+R6
+R0
+vriscv_cpu
+R7
+!i10b 1
+!s100 kUdHNl<_n82^E3c45<YRO0
+I0cVZ83S4N^AnW2<>W[i820
+R2
+R3
+w1676020571
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/core/riscv_cpu.v|
+!i113 0
+R6
+R0
+vriscv_cpu_soc_top
+R7
+!i10b 1
+!s100 ?<JgGT``d3PShDg>`<1:72
+IU[S^LV?KkUIBY@[gJfPWF1
+R2
+R3
+w1676174562
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\soc\..\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/soc/riscv_cpu_soc_top.v|
+!i113 0
+R6
+R0
+vrom
+R7
+!i10b 1
+!s100 4PjOSSXda][<iR8>QN[U40
+IdM<2W77YP_zDl_:<e?Kb_3
+R2
+R3
+w1675935855
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\JOKECHEN\Desktop\riscv_cpu\rtl\perips\..\core\defines.v|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/rom.v|
+!i113 0
+R6
+R0
+vtb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1676197348
+!i10b 1
+!s100 BoNP9DiB:I^V6WIYRSdSc2
+I]Z:EG:4aZ1=89mfLVbBgG1
+R2
+!s105 tb_v_unit
+S1
+R3
+w1676197335
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+!s108 1676197348.000000
+!s107 C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/tb/tb.v|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vuart_debug
+R7
+!i10b 1
+!s100 fX88jKoN2]BooK4@:H]>_2
+I:lSXC]ZRPORKcg6>4c?mY2
+R2
+R3
+w1675935870
+8C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v
+FC:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v
+L0 27
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/JOKECHEN/Desktop/riscv_cpu/rtl/perips/uart_debug.v|
+!i113 0
+R6
+R0

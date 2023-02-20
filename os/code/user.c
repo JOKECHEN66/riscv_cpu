@@ -7,6 +7,7 @@ int count = 0;
 void print_task(void)
 {
     printf("this is task[1]!\n");
+    asm volatile("li gp,  1" : :);
     task_delay(DELAY);
     task_yield();
 }
@@ -15,6 +16,7 @@ void count_task(void)
 {
     printf("this is task[2] schedule %d times\n",count);
     count = count + 1;
+    asm volatile("li gp,  2" : :);
     task_delay(DELAY);
     task_yield();
 }
@@ -23,6 +25,7 @@ void draw_task(void)
 {
     printf("this is task[3]\n");
     printf("-------\n-     -\n-     -\n-     -\n-------\n");
+    asm volatile("li gp,  3" : :);
     task_delay(DELAY);
     task_yield();
 }

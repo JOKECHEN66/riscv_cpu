@@ -20,10 +20,10 @@ void start_kernel(void)
 
 	schedule();
 
-    	// End flag
-    	asm volatile("li s11,  1" : :);
+    // End flag
+    asm volatile("li s11,  1" : :);
 
-    	uart_puts("End OS");
+    uart_puts("Error, should`t go here.");
 	while (1) {}; // stop here!
 }
 

@@ -29,11 +29,21 @@ _start:
 	add	sp, sp, t0		# move the current hart stack pointer
 					# to its place in the stack space
 
+    # la a0, message
+    # li a7, 4
+    # ecall
+    # ret
+
 	j	start_kernel		# hart 0 jump to c
 
 park:
 	wfi
 	j	park
+
+    # .data
+
+# message:
+    # .asciz "hello world"
 
 stacks:
 	.skip	STACK_SIZE * MAXNUM_CPU # allocate space for all the harts stacks

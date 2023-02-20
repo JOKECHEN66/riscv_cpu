@@ -60,4 +60,6 @@ code: all
 .PHONY : clean
 clean:
 	rm -rf *.o
+	rm -rf os.elf
+	rm -rf os.bin
 

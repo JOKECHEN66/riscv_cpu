@@ -11,6 +11,7 @@ extern void os_main(void);
 
 void start_kernel(void)
 {
+    asm volatile("li gp,  0" : :);
 	uart_init();
 	uart_puts("Hello, OS!\n");
 

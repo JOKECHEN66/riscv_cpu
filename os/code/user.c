@@ -70,6 +70,14 @@
 //     // }
 // }
 
+void task1(){
+    asm volatile("li s8,  4"
+                 :
+                 :);
+    task_delay(DELAY);
+    task_yield();
+}
+
 void gcd()
 {
     int n = 5;
@@ -93,7 +101,7 @@ void gcd()
         result = a;
     }
     // printf("数组中的最大公约数为：%d\n", result);
-    asm volatile("li s8,  6"
+    asm volatile("li s8,  5"
                  :
                  :);
     task_delay(DELAY);
@@ -160,6 +168,7 @@ void quicksort()
 void os_main(void)
 {
     // task_create();
+    task_create(task1);
     task_create(gcd);
     task_create(quicksort);
 }

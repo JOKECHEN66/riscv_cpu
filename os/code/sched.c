@@ -31,7 +31,6 @@ void sched_init()
 void schedule()
 {
 	if (_top <= 0) {
-		panic("Num of task should be greater than zero!");
 		return;
 	}
 

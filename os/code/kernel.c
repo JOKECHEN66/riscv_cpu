@@ -1,21 +1,15 @@
 #include "os.h"
 
-/*
- * Following functions SHOULD be called ONLY ONE time here,
- * so just declared here ONCE and NOT included in file os.h.
- */
-extern void uart_init(void);
 extern void sched_init(void);
 extern void schedule(void);
 extern void os_main(void);
 
 void start_kernel(void)
 {
-    asm volatile("li gp,  0" : :);
-	uart_init();
-	uart_puts("Hello, OS!\n");
 
+    asm volatile("li s7,  1" : :);
 	sched_init();
+    asm volatile("li s7,  2" : :);
 
 	os_main();
 
@@ -24,7 +18,6 @@ void start_kernel(void)
     // End flag
     asm volatile("li s11,  1" : :);
 
-    uart_puts("Error, should`t go here.");
 	while (1) {}; // stop here!
 }
 

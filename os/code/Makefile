@@ -16,11 +16,9 @@ OBJDUMP = ${CROSS_COMPILE}objdump
 SRCS_ASM = \
 	start.S \
 	mem.S \
-	entry.S \
 
 SRCS_C = \
 	kernel.c \
-	sched.c \
 	user.c \
 
 OBJS = $(SRCS_ASM:.S=.o)

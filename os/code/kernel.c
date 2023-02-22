@@ -7,16 +7,12 @@ extern void os_main(void);
 void start_kernel(void)
 {
 
-    asm volatile("li s7,  1" : :);
 	sched_init();
-    asm volatile("li s7,  2" : :);
 
 	os_main();
 
+    // 再次进行任务调度
 	schedule();
-
-    // End flag
-    asm volatile("li s11,  1" : :);
 
 	while (1) {}; // stop here!
 }

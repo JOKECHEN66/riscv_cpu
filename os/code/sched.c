@@ -6,6 +6,8 @@ extern void switch_to(struct context *next);
 #define MAX_TASKS 10
 #define STACK_SIZE 1024
 uint8_t task_stack[MAX_TASKS][STACK_SIZE];
+
+// task列表
 struct context ctx_tasks[MAX_TASKS];
 
 /*
@@ -22,7 +24,7 @@ static void w_mscratch(reg_t x)
 
 void sched_init()
 {
-	w_mscratch(0);
+	w_mscratch(0); //初始化的时候，不存在前一个任务，所以置0
 }
 
 /*
@@ -40,13 +42,8 @@ void schedule()
 }
 
 /*
- * DESCRIPTION
- * 	Create a task.
- * 	- start_routin: task routune entry
- * RETURN VALUE
- * 	0: success
- * 	-1: if error occured
- */
+如果task list未满，就新建任务放进去(存储了上一个任务到sp中，当前任务到ra)
+*/
 int task_create(void (*start_routin)(void))
 {
 	if (_top < MAX_TASKS) {
@@ -60,9 +57,7 @@ int task_create(void (*start_routin)(void))
 }
 
 /*
- * DESCRIPTION
- * 	task_yield()  causes the calling task to relinquish the CPU and a new 
- * 	task gets to run.
+主动调用来进行调度
  */
 void task_yield()
 {

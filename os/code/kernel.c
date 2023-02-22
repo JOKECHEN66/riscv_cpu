@@ -6,8 +6,8 @@ void start_kernel(void)
 {
 
     asm volatile("li s7,  1" : :);
+    for (uint64_t i = 9999999; i > 0; i--);
 	os_main();
-    asm volatile("li s10,  1" : :);
     
 	while (1) {}; // stop here!
 }

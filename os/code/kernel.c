@@ -2,11 +2,17 @@
 
 extern void os_main(void);
 
+void task_delay(volatile int count)
+{
+	count *= 50000;
+	while (count--);
+}
+
 void start_kernel(void)
 {
 
     asm volatile("li s7,  1" : :);
-    for (uint64_t i = 9999999; i > 0; i--);
+    task_delay(5000);
 	os_main();
     
 	while (1) {}; // stop here!

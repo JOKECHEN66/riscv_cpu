@@ -99,21 +99,21 @@ void os_main(void)
     asm volatile("li s9,  1" : :);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (uint64_t i = 9999999; i > 0; i--);
+    task_delay(5000);
 
     gcd();
     asm volatile("li s8,  1" : :);
     asm volatile("li s9,  1" : :);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (uint64_t i = 9999999; i > 0; i--);
+    task_delay(5000);
 
     quicksort();
     asm volatile("li s8,  1" : :);
     asm volatile("li s9,  1" : :);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (uint64_t i = 9999999; i > 0; i--);
+    task_delay(5000);
 
     asm volatile("li s10,  1" : :);
 }

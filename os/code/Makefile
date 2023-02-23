@@ -20,6 +20,8 @@ SRCS_ASM = \
 
 SRCS_C = \
 	kernel.c \
+	uart.c \
+	printf.c \
 	sched.c \
 	user.c \
 

@@ -2,78 +2,96 @@
 
 #define DELAY 1000
 
+int count = 0;
 
-// void dijkstra()
-// {
-// #define V 6
-//     int start = 0;
+void print_task(void)
+{
+    printf("this is task[1]!\n");
+    task_delay(DELAY);
+    task_yield();
+}
 
-//     int graph[V][V] = {
-//         {0, 2, 0, 0, 0, 1},
-//         {2, 0, 4, 1, 0, 0},
-//         {0, 4, 0, 1, 3, 0},
-//         {0, 1, 1, 0, 2, 0},
-//         {0, 0, 3, 2, 0, 1},
-//         {1, 0, 0, 0, 1, 0}
-//     };
+void count_task(void)
+{
+    printf("this is task[2] schedule %d times\n", count);
+    count = count + 1;
+    task_delay(DELAY);
+    task_yield();
+}
 
-//     int dist[V];
+void draw_task(void)
+{
+    printf("this is task[3]\n");
+    printf("-------\n-     -\n-     -\n-     -\n-------\n\n");
+    task_delay(DELAY);
+    task_yield();
+}
 
-//     // 记录哪些顶点已经处理过
-//     int processed[V];
+void dijkstra()
+{
+#define V 6
+    int start = 0;
 
-//     // 初始化距离和处理标记数组
-//     for (int i = 0; i < V; i++)
-//     {
-//         dist[i] = 9999;
-//         processed[i] = 0;
-//     }
+    int graph[V][V] = {
+        {0, 2, 0, 0, 0, 1},
+        {2, 0, 4, 1, 0, 0},
+        {0, 4, 0, 1, 3, 0},
+        {0, 1, 1, 0, 2, 0},
+        {0, 0, 3, 2, 0, 1},
+        {1, 0, 0, 0, 1, 0}};
 
-//     // 将起始顶点到自身的距离初始化为0
-//     dist[start] = 0;
+    int dist[V];
 
-//     // 处理剩余V-1个顶点
-//     for (int i = 0; i < V - 1; i++)
-//     {
-//         // 找到距离起点最近的未处理顶点
-//         int min_dist = 9999;
-//         int min_dist_index;
-//         for (int j = 0; j < V; j++)
-//         {
-//             if (processed[j] == 0 && dist[j] <= min_dist)
-//             {
-//                 min_dist = dist[j];
-//                 min_dist_index = j;
-//             }
-//         }
+    // 记录哪些顶点已经处理过
+    int processed[V];
 
-//         // 标记该顶点已经处理过
-//         processed[min_dist_index] = 1;
+    // 初始化距离和处理标记数组
+    for (int i = 0; i < V; i++)
+    {
+        dist[i] = 9999;
+        processed[i] = 0;
+    }
 
-//         // 更新与该顶点相邻的顶点的距离
-//         for (int j = 0; j < V; j++)
-//         {
-//             if (graph[min_dist_index][j] != 0 &&
-//                 processed[j] == 0 &&
-//                 dist[min_dist_index] != 9999 &&
-//                 dist[min_dist_index] + graph[min_dist_index][j] < dist[j])
-//             {
-//                 dist[j] = dist[min_dist_index] + graph[min_dist_index][j];
-//             }
-//         }
-//     }
+    // 将起始顶点到自身的距离初始化为0
+    dist[start] = 0;
 
-//     // 输出结果
-//     // printf("顶点\t最短距离\n");
-//     // for (int i = 0; i < V; i++) {
-//     //     printf("%d\t\t%d\n", i, dist[i]);
-//     // }
-// }
+    // 处理剩余V-1个顶点
+    for (int i = 0; i < V - 1; i++)
+    {
+        // 找到距离起点最近的未处理顶点
+        int min_dist = 9999;
+        int min_dist_index;
+        for (int j = 0; j < V; j++)
+        {
+            if (processed[j] == 0 && dist[j] <= min_dist)
+            {
+                min_dist = dist[j];
+                min_dist_index = j;
+            }
+        }
 
-void task1(){
-    asm volatile("li s8,  4"
-                 :
-                 :);
+        // 标记该顶点已经处理过
+        processed[min_dist_index] = 1;
+
+        // 更新与该顶点相邻的顶点的距离
+        for (int j = 0; j < V; j++)
+        {
+            if (graph[min_dist_index][j] != 0 &&
+                processed[j] == 0 &&
+                dist[min_dist_index] != 9999 &&
+                dist[min_dist_index] + graph[min_dist_index][j] < dist[j])
+            {
+                dist[j] = dist[min_dist_index] + graph[min_dist_index][j];
+            }
+        }
+    }
+
+    printf("dijkstra alg done! \n\n");
+    printf("顶点\t最短距离\n");
+    for (int i = 0; i < V; i++)
+    {
+        printf("%d\t\t%d\n", i, dist[i]);
+    }
     task_delay(DELAY);
     task_yield();
 }
@@ -100,10 +118,8 @@ void gcd()
         }
         result = a;
     }
-    // printf("数组中的最大公约数为：%d\n", result);
-    asm volatile("li s8,  5"
-                 :
-                 :);
+    printf("gcd alg done! \n");
+    printf("数组中的最大公约数为：%d\n\n", result);
     task_delay(DELAY);
     task_yield();
 }
@@ -153,13 +169,13 @@ void quicksort()
         }
     }
 
-    // printf("排序后的数组：");
-    // for (int i = 0; i < n; i++) {
-    //     printf("%d ", arr[i]);
-    // }
-    asm volatile("li s8,  6"
-                 :
-                 :);
+    printf("quick sort alg done! \n");
+    printf("排序后的数组：");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     task_delay(DELAY);
     task_yield();
 }
@@ -167,8 +183,10 @@ void quicksort()
 /* NOTICE: DON'T LOOP INFINITELY IN main() */
 void os_main(void)
 {
-    // task_create();
-    task_create(task1);
+    task_create(print_task);
+    task_create(count_task);
+    task_create(draw_task);
+    task_create(dijkstra);
     task_create(gcd);
     task_create(quicksort);
 }

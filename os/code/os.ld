@@ -7,7 +7,7 @@ ENTRY( _start )
 /* 定义内存区域，包括 RAM 的起始地址和大小这里的1000代表实际物理地址 */
 MEMORY
 {
-	ram   (wxa!ri) : ORIGIN = 0x00001000, LENGTH = 128M
+	ram   (wxa!ri) : ORIGIN = 0x80000000, LENGTH = 128M
 }
 
 /*

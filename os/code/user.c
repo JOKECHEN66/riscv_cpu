@@ -96,26 +96,26 @@ void os_main(void)
     alg0();
     asm volatile("li s8,  1" : :);
     asm volatile("li s9,  1" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
 
     gcd();
     asm volatile("li s8,  1" : :);
     asm volatile("li s9,  1" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
 
     quicksort();
     asm volatile("li s8,  1" : :);
     asm volatile("li s9,  1" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
     asm volatile("li s8,  0" : :);
     asm volatile("li s9,  0" : :);
-    for (int i = 2000000; i > 0; i--);
+    for (int i = 5000; i > 0; i--);
 
     asm volatile("li s10,  1" : :);
 }
